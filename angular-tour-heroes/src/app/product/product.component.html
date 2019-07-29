@@ -1,0 +1,25 @@
+<div class="component_listing">
+    <div class="row">
+        <div class="col-3" *ngFor="let product of products">
+            <div class="card"
+                [ngClass]="{
+                'boder' : isShow,
+                'shadow' : isShow
+              }"
+            >
+            <button (click)="addClass()">Click me</button>
+                 <img src="http://2.bp.blogspot.com/-6h46giUD7Zs/VfMgO24OYSI/AAAAAAAAAL0/5w2kJcjje8g/s1600/early_project__yasuo_splash_by_yideth-d81voro.jpg" class="card-img-top" alt="...">
+                 <div class="card-body">  
+                      <h5 class="card-title">{{ product.name }}</h5>
+                      <p class="cart-text">some quieck emample text to build on the cart</p>
+                      <a href="#" class="btn btn-primary" (click)="detailProduct(product)">View</a>
+                      <button class="btn btn-danger" (click)="removeProduct(product)">Remove</button>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>
+<app-product-detail [product]="selectedProduct"></app-product-detail>
+<!-- <div *ngIf="selectedProduct">
+  {{ selectedProduct.name }}
+</div> -->

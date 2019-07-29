@@ -1,0 +1,9 @@
+<form>
+	<br>
+	<div class="form-group w-50">
+		<label for="exampleInputEmail"> Address </label>
+		<input type="text" class="form-control" id="inputAddress" [(ngModel)]="product.name" name="addProduct" autocomplete="off">
+		
+	</div>
+	<button type="submit" class="btn btn-primary" (click)="addProduct()">Submit</button>
+</form>
